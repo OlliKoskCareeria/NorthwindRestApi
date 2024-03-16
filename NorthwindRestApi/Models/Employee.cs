@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace NorthwindRestApi.Models
 {
@@ -26,6 +27,8 @@ namespace NorthwindRestApi.Models
         public string? Country { get; set; }
         public string? HomePhone { get; set; }
         public string? Extension { get; set; }
+
+        [JsonIgnore]
         public byte[]? Photo { get; set; }
         public string? Notes { get; set; }
         public int? ReportsTo { get; set; }
